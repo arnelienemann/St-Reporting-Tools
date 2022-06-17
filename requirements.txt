@@ -3,7 +3,6 @@ pandas
 numpy
 seaborn
 matplotlib
-psycopg2-binary
 re 
 turtle 
 h11 
