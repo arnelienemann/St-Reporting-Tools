@@ -9,4 +9,3 @@ numpy
 pandas 
 wordcloud 
 python-pptx 
-csv
