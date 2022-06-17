@@ -10,11 +10,5 @@ streamlit
 numpy
 pandas 
 wordcloud 
-datetime
-io
-PIL 
-pptx 
-audioop
-msilib
-operator
+python-pptx 
 csv
