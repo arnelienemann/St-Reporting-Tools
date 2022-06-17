@@ -1,9 +1,7 @@
 streamlit
 pandas
 numpy
-seaborn
-matplotlib
-turtle  
+seaborn 
 matplotlib 
 pyparsing
 streamlit
