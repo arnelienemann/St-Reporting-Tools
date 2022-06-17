@@ -4,7 +4,6 @@ numpy
 seaborn
 matplotlib
 psycopg2-binary
-pickle 
 re 
 turtle 
 h11 
