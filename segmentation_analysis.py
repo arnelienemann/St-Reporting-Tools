@@ -3,7 +3,7 @@ from configparser import Interpolation
 from ctypes import util
 from msilib.schema import ProgId
 from pickle import TRUE
-from turtle import color
+#from turtle import color
 from matplotlib import image
 import streamlit as st
 import numpy as np
