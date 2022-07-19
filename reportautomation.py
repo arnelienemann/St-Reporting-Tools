@@ -2,7 +2,7 @@ from configparser import Interpolation
 from ctypes import util
 from pickle import TRUE
 from re import X
-from turtle import color
+#from turtle import color
 #from h11 import Data
 from matplotlib import image
 from pyparsing import col
