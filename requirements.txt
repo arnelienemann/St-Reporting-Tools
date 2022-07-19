@@ -4,6 +4,5 @@ numpy
 seaborn 
 matplotlib 
 pyparsing
-tk
 wordcloud 
 python-pptx 
