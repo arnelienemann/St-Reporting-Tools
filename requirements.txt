@@ -4,7 +4,7 @@ numpy
 seaborn 
 matplotlib 
 pyparsing
-tkinter
+tk
 turtle
 wordcloud 
 python-pptx 
