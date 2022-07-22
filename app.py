@@ -1,12 +1,14 @@
 import reportautomation
 import segmentation_analysis
 import wordclouds
+import pricesensitivity
 
 import streamlit as st
 
 PAGES = {
-    "Report Automation": reportautomation,
+    #"Report Automation": reportautomation,
     "Wordcloud": wordclouds,
+    "Price Sensitivity Tool": pricesensitivity,
     "Segmentation Analysis": segmentation_analysis
 }
 st.sidebar.title('Navigation')
