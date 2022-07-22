@@ -9,7 +9,7 @@ from pyparsing import col
 import streamlit as st
 import numpy as np
 import pandas as pd
-#from wordcloud import STOPWORDS, WordCloud
+from wordcloud import STOPWORDS, WordCloud
 import matplotlib.pyplot as plt
 import datetime
 import io
