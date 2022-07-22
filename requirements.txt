@@ -6,3 +6,4 @@ matplotlib
 pyparsing
 wordcloud 
 python-pptx 
+xlrd 
