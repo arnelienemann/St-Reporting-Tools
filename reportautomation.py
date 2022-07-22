@@ -102,7 +102,7 @@ def app():
                             x, y = np.ogrid[:400, :400]
                             mask = (x - 200) ** 2 + (y - 200) ** 2 > 175 ** 2
                             mask = 255 * mask.astype(int)
-                            wc = WordCloud(stopwords=STOPWORDS, background_color="white", color_func=lambda *args, **kwargs: (0,144,214), width=400, height=400, mask=mask)
+                            wc = WordCloud(font_path ="data-wordcloud/NotArial.ttf", stopwords=STOPWORDS, background_color="white", color_func=lambda *args, **kwargs: (0,144,214), width=400, height=400, mask=mask)
                             
                             text = ' '.join(df_data[column].fillna(''))
                             wordcloud = wc.generate(text) 
