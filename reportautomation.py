@@ -37,7 +37,7 @@ def app():
     Project_name = st.text_input(label="Project Name:", value="Project Name")
 
     #data_file = st.file_uploader("Please select your .xls file:")
-    data_file = "data-reportautomation\data.xls"
+    data_file = "data-reportautomation/data.xls"
 
     df_data = pd.read_excel(data_file, sheet_name="Data")
     labels = pd.read_excel(data_file, sheet_name="Labels")
