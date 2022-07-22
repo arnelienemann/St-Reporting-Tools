@@ -34,17 +34,20 @@ def app():
     end_slide_layout = prs.slide_layouts[19]
 
     st.header("Reporting Automation")
+    st.write("Step 1: Enter your project name.")
     Project_name = st.text_input(label="Project Name:", value="Project Name")
 
-    #data_file = st.file_uploader("Please select your .xls file:")
-    data_file = "data-reportautomation/data.xls"
+    st.write("Step 2: choose the survey results file in below. ")
+    data_file = st.file_uploader("Please select your .xls file:")
+    #data_file = "data-reportautomation/data.xls"
 
     df_data = pd.read_excel(data_file, sheet_name="Data")
     labels = pd.read_excel(data_file, sheet_name="Labels")
     labels.columns = ["questions", "answers"]
 
     st.write("Project Data:")
-    st.dataframe(df_data)
+    if df_data:
+        st.dataframe(df_data)
 
     #fragetexte = []
 
@@ -67,7 +70,7 @@ def app():
     #df_label
 
     answer_keys = pd.DataFrame(columns=["Values"])
-
+    st.write("Step 3: click 'calculate' to start processing the survey results.")
     if st.button("Calculate"): #to be replaced by file uploader - check is file is uploaded and start calc
 
         title_slide = prs.slides.add_slide(title_slide_layout)
@@ -141,8 +144,9 @@ def app():
                         pic.top = int((prs.slide_height - pic.height) * 0.5)   
 
                 elif "_" in column:
-                    st.write("Matrixfrage")
-                    st.write(column)
+                    #st.write("Matrixfrage")
+                    st.write(" ")
+                    #st.write(column)
 
                 else:
                     if len(relative_frequencies) != 0:
@@ -194,7 +198,7 @@ def app():
         end_slide.shapes[1].text ="Contact \nArne Lienemann \nConsumer Insights | Global Portfolio Management \nArne.Lienemann@Sennheiser-ce.com"
 
         prs.save('data-reportautomation/newppt.pptx')
-
+        st.write("Step 4: Download the final presentation as .pptx file.")
         #with open(file_path, 'rb') as my_file:
         with open('data-reportautomation/newppt.pptx', 'rb') as my_file:
             st.download_button(label = 'Download', data = my_file, file_name = Project_name + '.pptx') 
