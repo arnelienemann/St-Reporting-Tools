@@ -80,12 +80,11 @@ def app():
 
         cdfs = cdf_table(data)
 
-        Point_of_Marginal_Cheapness = cdfs.iloc[np.argwhere(np.diff(np.sign(cdfs['Too Cheap'] - cdfs['Not Cheap']))).flatten()+1]['Price'].values[0]
-        Point_of_Marginal_Expensiveness = cdfs.iloc[np.argwhere(np.diff(np.sign(cdfs['Too Expensive'] - cdfs['Not Expensive']))).flatten()+1]['Price'].values[0]
-        Optimal_Price_Point = cdfs.iloc[np.argwhere(np.diff(np.sign(cdfs['Too Expensive'] - cdfs['Too Cheap']))).flatten()+1]['Price'].values[0]
-
-        st.write(f"Marginal Price Range: ${Point_of_Marginal_Cheapness:.2f} to ${Point_of_Marginal_Expensiveness:.2f}")
-        st.write(f"Optimal Price Point: ${Optimal_Price_Point:.2f}")
+        #Point_of_Marginal_Cheapness = cdfs.iloc[np.argwhere(np.diff(np.sign(cdfs['Too Cheap'] - cdfs['Not Cheap']))).flatten()+1]['Price'].values[0]
+        #Point_of_Marginal_Expensiveness = cdfs.iloc[np.argwhere(np.diff(np.sign(cdfs['Too Expensive'] - cdfs['Not Expensive']))).flatten()+1]['Price'].values[0]
+        #Optimal_Price_Point = cdfs.iloc[np.argwhere(np.diff(np.sign(cdfs['Too Expensive'] - cdfs['Too Cheap']))).flatten()+1]['Price'].values[0]
+        #st.write(f"Marginal Price Range: ${Point_of_Marginal_Cheapness:.2f} to ${Point_of_Marginal_Expensiveness:.2f}")
+        #st.write(f"Optimal Price Point: ${Optimal_Price_Point:.2f}")
 
         cdfs = cdfs.set_index("Price")
         #st.dataframe(cdfs[["Too Cheap", "Cheap", "Too Expensive", "Expensive"]]) # Drop cdfs["Not expensive"] & cdfs["Not Cheap"]
