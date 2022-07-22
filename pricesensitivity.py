@@ -93,7 +93,8 @@ def app():
         st.line_chart(cdfs[["Too Cheap", "Cheap", "Too Expensive", "Expensive"]])
 
         acceptance_data = pd.DataFrame()
-        acceptance_data['Acceptance'] = 1 - cdfs['Cheap'] - cdfs['Expensive']
+        #acceptance_data['Acceptance'] = 1 - cdfs['Cheap'] - cdfs['Expensive']
+        acceptance_data['Acceptance'] = 1 - cdfs['Too Cheap'] - cdfs['Too Expensive']
         acceptance_data['Revenue'] = acceptance_data['Acceptance'] * acceptance_data.index
         st.write("\nPrice acceptance:")
         st.line_chart(acceptance_data['Acceptance'])
