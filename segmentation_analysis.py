@@ -31,18 +31,18 @@ def app():
     relatives = None
 
     st.header("Segmentation analysis")
-    st.write("Step 1: Select the columns in your survey results excel sheet and copy the data into your clipboard.")
-    st.write("Step 2: Click on the button below to start processing the segmentation analysis.")
+    st.write("Step 1: Select the columns related to segmentation questions in your survey results excel sheet and paste them into a new excel file (.xls).")
+    #st.write("Step 2: Click on the button below to start processing the segmentation analysis.")
 
     #data = pd.read_csv("data/example.csv", sep=";")
 
     uploaded_file = st.file_uploader("Choose a file")
-    data = pd.read_excel(uploaded_file, names=["f_1","f_2","f_3", "f_4", "f_5","f_6","f_7", "f_8", "f_9","f_10"])
-
+    
     #if st.button(label="Read clipboard"):
      #   data = pd.read_clipboard(sep=";")
 
-    if data is not None:
+    if uploaded_file is not None:
+        data = pd.read_excel(uploaded_file, names=["f_1","f_2","f_3", "f_4", "f_5","f_6","f_7", "f_8", "f_9","f_10"])
         key = pd.read_csv("segmentation-data/segmentation_key.csv", sep=";", index_col=0)
         #data = key[key.columns[1:6]]
         Segments = {}
