@@ -24,8 +24,8 @@ def app():
 
     #uploaded_file = st.file_uploader("Choose a file")
     st.title("Create a Wordcloud")
-
-    question_text = st.text_input(label="Enter your question here:", value="Question number 1:")
+    question_text = "Word counts"
+    #question_text = st.text_input(label="Enter your question here:", value="Question number 1:")
     text = st.text_area(label="Paste your text here:", value="abc")
 
     #### alternative: File-uploader
@@ -50,7 +50,7 @@ def app():
         #users_stopwords = st.text_input(label="Stopwords")
         #combined_stopwords = list(users_stopwords) + list(STOPWORDS)
 
-        wc = WordCloud(stopwords=STOPWORDS, background_color="white", color_func=lambda *args, **kwargs: (0,144,214), width=400, height=400, mask=mask)
+        wc = WordCloud(font_path ="data-wordcloud/NotArial.ttf", stopwords=STOPWORDS, background_color="white", color_func=lambda *args, **kwargs: (0,144,214), width=400, height=400, mask=mask)
 
         # TODO: Add STOPWORDS!
         # TODO: Add translation via google translate!
