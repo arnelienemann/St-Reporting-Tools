@@ -84,8 +84,9 @@ def app():
 
         st.bar_chart(data = st.session_state.relatives)
 
-    if st.button("Copy raw data to clipboard"):
-        st.session_state.return_pd["Segment"].to_clipboard()
+    #TODO: Not working weith streamlit. ST has no access to the clipboard. Update!
+    #if st.button("Copy raw data to clipboard"):
+    #    st.session_state.return_pd["Segment"].to_clipboard()
 
     st.write("Step 3: Create PowerPoint slide based on calculated results:")
     if st.button('Create ppt'):
