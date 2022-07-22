@@ -50,7 +50,7 @@ def app():
         #users_stopwords = st.text_input(label="Stopwords")
         #combined_stopwords = list(users_stopwords) + list(STOPWORDS)
 
-        wc = WordCloud(stopwords=STOPWORDS, background_color="white", color_func=lambda *args, **kwargs: (0,144,214), width=400, height=400, mask=mask)
+        wc = WordCloud(stopwords=STOPWORDS, background_color="white", color_func=lambda *args, **kwargs: (200,144,214), width=400, height=400, mask=mask)
 
         # TODO: Add STOPWORDS!
         # TODO: Add translation via google translate!
