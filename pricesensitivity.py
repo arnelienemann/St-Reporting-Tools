@@ -102,7 +102,7 @@ def app():
 
     if st.button('Create ppt'):
 
-        file_path = "template.pptx"
+        file_path = "data-pricesensitivity/template.pptx"
         prs = Presentation(file_path)
 
         title_slide_layout = prs.slide_layouts[0]
